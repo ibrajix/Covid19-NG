@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="slide_margin_left_title">20dp</dimen>
+    <dimen name="slide_margin_right_title">20dp</dimen>
+    <dimen name="slide_margin_top_title">90dp</dimen>
+    <dimen name="slide_margin_bottom_title">20dp</dimen>
+    <dimen name="slide_padding_left_title">20dp</dimen>
+    <dimen name="slide_text_size_title">20sp</dimen>
+    <dimen name="slide_image_margin_top">70sp</dimen>
+
+    <dimen name="slide_image_size">300dp</dimen>
+
+    <dimen name="slide_margin_top_desc">20dp</dimen>
+    <dimen name="slide_padding_left_desc">10dp</dimen>
+    <dimen name="slide_padding_right_desc">10dp</dimen>
+    <dimen name="slide_text_size_desc">26sp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="thumbnail">40dp</dimen>
+    <dimen name="row_padding">10dp</dimen>
+    <dimen name="contact_name">15dp</dimen>
+    <dimen name="contact_number">12dp</dimen>
+
+</resources>
