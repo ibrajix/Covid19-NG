@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Covid19-NG</string>
 
-    <string name="slide_1_desc">Protect yourself from coronavirus and help stop the spread</string>
+    //slide screen
+    <string name="slide_1_desc">Protect yourself from coronavirus pandemic!</string>
     <string name="slide_2_desc">Keep yourself and your family home quarantied!</string>
     <string name="slide_3_desc">Follow the directions of your local health authority!</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="get_started">Get Started</string>
+
 </resources>

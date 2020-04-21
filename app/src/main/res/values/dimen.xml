@@ -13,7 +13,7 @@
     <dimen name="slide_margin_top_desc">20dp</dimen>
     <dimen name="slide_padding_left_desc">10dp</dimen>
     <dimen name="slide_padding_right_desc">10dp</dimen>
-    <dimen name="slide_text_size_desc">26sp</dimen>
+    <dimen name="slide_text_size_desc">20sp</dimen>
 
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
