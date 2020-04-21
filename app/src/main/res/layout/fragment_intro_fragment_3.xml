@@ -13,7 +13,7 @@
         android:layout_width="@dimen/slide_image_size"
         android:layout_height="@dimen/slide_image_size"
         android:layout_gravity="center"
-        android:src="@drawable/ic_follow_health_workers"
+        app:srcCompat="@drawable/ic_follow_health_workers"
         android:layout_marginTop="@dimen/slide_image_margin_top" />
 
     <TextView
