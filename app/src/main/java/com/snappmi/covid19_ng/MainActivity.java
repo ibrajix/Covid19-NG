@@ -58,11 +58,21 @@ public class MainActivity extends AppCompatActivity {
         // make status bar transparent
         changeStatusBarColor();
 
-        get_started_btn.setOnClickListener(new View.OnClickListener() {
+       /* get_started_btn.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 if (viewPager.getCurrentItem() < adapter.getCount()) {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 }
+            }
+        });*/
+
+       //setting click listeners on get started button click
+        get_started_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //starting the home activity when the user clicks get started
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -77,16 +87,8 @@ public class MainActivity extends AppCompatActivity {
             @Override public void onPageSelected(int position) {
                 if (position == adapter.getCount() - 1) {
                     get_started_btn.setText(R.string.get_started);
-                    get_started_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            //starting the home activity when the user clicks get started
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        }
-                    });
                 } else {
-                    get_started_btn.setText(R.string.next);
+                    get_started_btn.setText(R.string.skip);
                 }
             }
 
