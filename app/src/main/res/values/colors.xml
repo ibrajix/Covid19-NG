@@ -7,4 +7,13 @@
     <color name="intro_blue">#8E8DEA</color>
     <color name="intro_dot_background">#CACDE2</color>
     <color name="dark_blue">#6664E9</color>
+    <color name="yellow">#F49F1F</color>
+    <color name="dark_blue_home">#2555FF</color>
+    <color name="green">#52B534</color>
+    <color name="red">#B13A34</color>
+    <color name="home_bg">#DDDFF0</color>
+    <color name="light">#DDDFF0</color>
+    <color name="dark_home_bg_opaque">#592555FF</color>
+    <color name="home_blue">#2555FF</color>
+    <color name="light_blue">#BA3763FF</color>
 </resources>

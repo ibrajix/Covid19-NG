@@ -1,12 +1,48 @@
 <resources>
     <string name="app_name">Covid19-NG</string>
+    <string name="covid_19">Covid-19</string>
+    <string name="NG">NG</string>
 
-    //slide screen
+    <!-- Slide screen-->
     <string name="slide_1_desc">Protect yourself from coronavirus pandemic!</string>
     <string name="slide_2_desc">Keep yourself and your family home quarantied!</string>
     <string name="slide_3_desc">Follow the directions of your local health authority!</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="get_started">Get Started</string>
+
+    <!-- Home screen-->
+    <string name="latest_updates">Latest Updates</string>
+    <string name="confirmed_cases">Confirmed</string>
+    <string name="recovered_cases">Recovered</string>
+    <string name="death_cases">Deaths</string>
+    <string name="today">TODAY</string>
+    <string name="today_confirmed_cases">Confirmed:</string>
+    <string name="today_recovered_cases">Recovered:</string>
+    <string name="today_death_cases">Death:</string>
+    <string name="safety">Safety</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="call_text">Experiencing symptoms?</string>
+    <string name="call_now">Call Now!</string>
+    <string name="todo">Feeling bored? Try these...</string>
+    <string name="shop_home">Shop</string>
+    <string name="learn_skill">Learn</string>
+    <string name="watch_movie">Movies</string>
+    <string name="read_book">Read</string>
+    <string name="call_friend">Call</string>
+    <string name="news">News</string>
+    <string name="entertainment">Entertainment</string>
+
+    <!-- Symptoms screen-->
+    <string name="one">1.</string>
+    <string name="cough">Cough</string>
+    <string name="two">2.</string>
+    <string name="fever">High temperature (Fever)</string>
+    <string name="three">3.</string>
+    <string name="tiredness">Tiredness</string>
+    <string name="four">4.</string>
+    <string name="difficulty_breathing">Difficulty Breathing (Severe cases)</string>
+    <string name="info_text">It is worth noting that people may be with the virus for 1&#8211;14 days without developing symptoms.</string>
+
 
 </resources>
