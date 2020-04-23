@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class ShopActivity extends AppCompatActivity {
 
     private Spinner states_spinner;
+    private ImageView back_icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,18 @@ public class ShopActivity extends AppCompatActivity {
 
         //bind views
         states_spinner = findViewById(R.id.statesSpinner);
+        back_icon = findViewById(R.id.backIcon);
 
         ArrayAdapter<CharSequence> statesAdapter = ArrayAdapter.createFromResource(this, R.array.states_array, R.layout.spinner_text);
         statesAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
         states_spinner.setAdapter(statesAdapter);
+
+        back_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 }
