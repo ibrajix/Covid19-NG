@@ -452,7 +452,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/shop_home"
-                                android:textSize="15sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -479,7 +479,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/learn_skill"
-                                android:textSize="15sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -506,7 +506,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/watch_movie"
-                                android:textSize="15sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -533,7 +533,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/call_friend"
-                                android:textSize="15sp"
+                                android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>

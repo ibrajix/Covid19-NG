@@ -25,11 +25,11 @@
     <string name="call_text">Experiencing symptoms?</string>
     <string name="call_now">Call Now!</string>
     <string name="todo">Feeling bored? Try these...</string>
-    <string name="shop_home">Shop from Home</string>
-    <string name="learn_skill">Learn new Skill</string>
-    <string name="watch_movie">Watch a Movie</string>
+    <string name="shop_home">Shop</string>
+    <string name="learn_skill">Learn</string>
+    <string name="watch_movie">Watch</string>
     <string name="read_book">Read</string>
-    <string name="call_friend">Call your friends</string>
+    <string name="call_friend">Call</string>
     <string name="news">News</string>
     <string name="entertainment">Entertainment</string>
 
