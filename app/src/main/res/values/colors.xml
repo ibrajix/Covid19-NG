@@ -16,4 +16,7 @@
     <color name="dark_home_bg_opaque">#592555FF</color>
     <color name="home_blue">#2555FF</color>
     <color name="light_blue">#BA3763FF</color>
+    <color name="bottom_nav_icons">#7890FD</color>
+    <color name="black">#000000</color>
+    <color name="caret_grey">#5C5C5C</color>
 </resources>

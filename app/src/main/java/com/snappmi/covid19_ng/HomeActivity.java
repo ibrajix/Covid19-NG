@@ -20,6 +20,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.hbb20.CountryCodePicker;
 
 import adapters.TabsAdapter;
+import fragments.CasesFragment;
+import fragments.HomeFragment;
+import fragments.NewsFragment;
 import fragments.SafetyFragment;
 import fragments.SymptomsFragment;
 
@@ -28,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     private CountryCodePicker ccp;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private BottomNavigationView bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,35 +50,45 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         //bind views
-        ccp = findViewById(R.id.ccp);
-        tabLayout = findViewById(R.id.tabLayout);
-        viewPager = findViewById(R.id.viewPager);
 
-        //code to switch between tabs
+        //bottom nav
+       bottomNavigation = findViewById(R.id.bottom_navigation);
 
-        final TabsAdapter tabsAdapter = new TabsAdapter(this, getSupportFragmentManager(),
-                tabLayout.getTabCount());
+       //open the home fragment initially
+        loadFragment(new HomeFragment());
 
-        //tabs code to switch between tabs
-        viewPager.setAdapter(tabsAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+        //set click listeners to bottom nav
+        bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener(){
+        @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment;
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    fragment = new HomeFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_cases:
+                    fragment = new CasesFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_news:
+                    fragment = new NewsFragment();
+                    loadFragment(fragment);
+                    return true;
             }
+            return false;
+        }
+    };
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-
+    private void loadFragment(Fragment fragment) {
+        // load fragments
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

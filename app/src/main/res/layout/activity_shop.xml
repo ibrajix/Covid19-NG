@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefresh"
+    tools:context=".ShopActivity"
+    android:background="@color/home_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_container">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/headerSection"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backIcon"
+                    app:srcCompat="@drawable/ic_back_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shopText"
+                    android:text="@string/shop_from_home"
+                    android:layout_marginTop="21dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shopSection"
+                android:layout_below="@+id/headerSection"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corner_2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iconTextSection"
+                        android:layout_marginBottom="30dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shopHomeIcon"
+                            app:srcCompat="@drawable/ic_shop_home"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="90dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/shopHomeIcon"
+                            android:text="@string/shop_details_text"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iconTextSection"
+                        android:id="@+id/spinnerSection"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_state"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="50dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/statesSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_arrow_drop_down_black_48dp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pharmSection"
+                        android:layout_below="@+id/spinnerSection"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:id="@+id/medicineImage"
+                            app:srcCompat="@drawable/ic_medicine"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pharmName"
+                            android:text="H-Medix"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/medicineImage"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pharmCategory"
+                            android:text="Pharmaceuticals"
+                            android:layout_below="@+id/pharmName"
+                            android:layout_alignStart="@+id/pharmName"
+                            android:layout_alignLeft="@+id/pharmName"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pharmCategory"
+                            android:layout_alignStart="@+id/pharmCategory"
+                            android:layout_alignLeft="@+id/pharmCategory"
+                            android:textColor="@color/light_blue"
+                            android:text="Contact us"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/foodSection"
+                        android:layout_below="@+id/pharmSection"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:id="@+id/foodImage"
+                            app:srcCompat="@drawable/ic_yogurt"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/foodStoreName"
+                            android:text="Abdul food store"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/foodImage"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/foodCategory"
+                            android:text="Foods/Beverages"
+                            android:layout_below="@+id/foodStoreName"
+                            android:layout_alignStart="@+id/foodStoreName"
+                            android:layout_alignLeft="@+id/foodStoreName"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/foodCategory"
+                            android:layout_alignStart="@+id/foodCategory"
+                            android:layout_alignLeft="@+id/foodCategory"
+                            android:textColor="@color/light_blue"
+                            android:text="Contact us"
+                            />
+
+                    </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

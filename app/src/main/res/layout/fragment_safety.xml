@@ -15,7 +15,7 @@
             android:id="@+id/carouselView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:fillColor="#FFFFFFFF"
+            app:fillColor="@color/light_blue"
             app:pageColor="#00000000"
             app:radius="6dp"
             app:slideInterval="6000"

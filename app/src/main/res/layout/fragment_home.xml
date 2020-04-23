@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefresh"
+    tools:context=".HomeActivity"
+    android:background="@color/home_bg"
+    android:paddingBottom="56dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_container">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logoTextSection"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_logo_bg"
+                    android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textLogo"
+                            android:text="@string/covid_19"
+                            android:textStyle="bold"
+                            android:textColor="@color/yellow"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/NG"
+                            android:layout_toRightOf="@+id/textLogo"
+                            android:layout_toEndOf="@+id/textLogo"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/dark_blue_home"
+                            android:layout_marginLeft="3dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/updatesSection"
+                android:layout_below="@+id/logoTextSection"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_corner_2"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/latestUpdatesSection"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/latestUpdatesText"
+                        android:text="@string/latest_updates"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:ccp_defaultNameCode="NG"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="false"
+                        app:ccpDialog_showCloseIcon="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/figuresSection"
+                    android:layout_below="@+id/latestUpdatesSection"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progressBar"
+                        android:visibility="gone"
+                        android:indeterminate="true"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirmedCasesNumber"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="220"
+                        android:textColor="@color/yellow"
+                        />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirmedCasesText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/confirmed_cases"
+                        android:layout_below="@+id/confirmedCasesNumber"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/yellow"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recoveredCasesNumber"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:text="12"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recoveredCasesText"
+                        android:text="@string/recovered_cases"
+                        android:layout_below="@+id/recoveredCasesNumber"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deathCasesNumber"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:gravity="center"
+                        android:text="102"
+                        />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deathCasesText"
+                        android:text="@string/death_cases"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/deathCasesNumber"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todaySection"
+                    android:layout_below="@+id/figuresSection"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginEnd="20dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/today"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayConfirmedText"
+                            android:text="@string/today_confirmed_cases"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayConfirmedNumber"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayRecoveredText"
+                            android:text="@string/today_recovered_cases"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayCriticalNumber"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:textSize="12sp"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayDeathText"
+                            android:text="@string/today_death_cases"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/todayDeathNumber"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="10dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabSection"
+                android:layout_below="@+id/updatesSection"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_corner_4"
+                >
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/tab_layout_background"
+                    app:tabBackground="@drawable/tab_layout_selector"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/light_blue"
+                    app:tabPaddingStart="16dp"
+                    app:tabPaddingEnd="16dp"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabRippleColor="@null"
+                    app:tabGravity="fill"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    android:textAlignment="center">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/safety"
+                        android:textAlignment="center"
+                        />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/symptoms"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+                <helper.EnhancedWrapContentViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewPager"
+                    android:layout_below="@+id/tabLayout"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/callSection"
+                android:layout_below="@+id/tabSection"
+                android:background="@drawable/rounded_corner_2"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/callContainer"
+                    android:background="@drawable/rounded_corner_3"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/callText"
+                        android:text="@string/call_text"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:id="@+id/callBbutton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="@string/call_now"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/rounded_button"
+                        android:textAllCaps="false"
+                        android:textColor="@color/home_blue"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todoText"
+                    android:layout_below="@+id/callContainer"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/todo"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/todoText"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/toDoSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/shopIcon">
+
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@drawable/round_oval_button"
+                                android:padding="20dp"
+                                app:srcCompat="@drawable/ic_shop" />
+
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shop_home"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/light_blue"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/learnIcon">
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@drawable/round_oval_button_2"
+                                android:padding="20dp"
+                                app:srcCompat="@drawable/ic_learn" />
+
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/learn_skill"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/light_blue"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/moviesIcon">
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@drawable/round_oval_button_3"
+                                android:padding="20dp"
+                                app:srcCompat="@drawable/ic_entertainment" />
+
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/watch_movie"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/light_blue"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/callIcon">
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@drawable/round_oval_button_4"
+                                android:padding="20dp"
+                                app:srcCompat="@drawable/ic_phone_filled" />
+
+                            <TextView
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/call_friend"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/light_blue"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -28,7 +28,7 @@ public class SafetyFragment extends Fragment {
     private int[] sampleImages = {R.drawable.ic_undraw_wash_hands, R.drawable.ic_undraw_social_distancing, R.drawable.ic_undraw_dont_touch_face, R.drawable.ic_undraw_medical_help, R.drawable.ic_undraw_respiratory_hygiene, R.drawable.ic_undraw_stay_home};
 
     private String[] titles = {"Wash your hands regularly", "Observe social distancing", "Avoid touching your face"
-            , "Seek medical help when feeling unwell", "Practice respiratory hygiene", "Stay at home"};
+            , "Seek medical help", "Practice respiratory hygiene", "Stay at home"};
 
 
     private String[] description = {
@@ -41,7 +41,7 @@ public class SafetyFragment extends Fragment {
             "This may be hard, but your hands can pick up viruses unknown to you and by touching parts of your faces, " +
                     "the virus may end up entering your body.",
 
-            "If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. " +
+            "If you have a fever, cough and difficulty breathing, seek medical attention and call. " +
                     "Follow the directions giving by the ministry of health.",
 
             "This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. " +

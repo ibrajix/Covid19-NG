@@ -44,5 +44,42 @@
     <string name="difficulty_breathing">Difficulty Breathing (Severe cases)</string>
     <string name="info_text">It is worth noting that people may be with the virus for 1&#8211;14 days without developing symptoms.</string>
 
+    <!-- Bottom Nav-->
+    <string name="home">Home</string>
+    <string name="cases">Cases</string>
+
+    <!-- Cases fragment -->
+    <string name="all_cases_states">All cases in each state</string>
+    <string name="sort_by">Sort By:</string>
+    <string name="states">States</string>
+
+    <!-- News fragment -->
+    <string name="news_start_text">Get first hand real time news on coronavirus pandemic from various authentic sources below:</string>
+    <string name="who_text">World Health Organization coronavirus updates</string>
+    <string name="ncdc_text">Nigeria Center for Disease Control updates</string>
+    <string name="bbc_text">BBC updates on covid-19</string>
+    <string name="aljazeera_text">Aljazeera updates on coronavirus</string>
+    <string name="vanguard_text">Vanguard updates on coronavirus</string>
+    <string name="nytimes_text">The New York Times Live news updates on coronavirus</string>
+    <string name="wikipedia_text">Wikipedia information and update on the coronavirus pandemic</string>
+
+    <!-- Shop activity -->
+    <string name="shop_from_home">Shop from home</string>
+    <string name="shop_details_text">Get basic needs such as food and pharmaceutical from government approved stores and pharmacies</string>
+    <string name="select_state">Select your state</string>
+        <string-array name="states_array">
+            <item>Abia</item>
+            <item>Adamawa</item>
+            <item>Akwa Ibom</item>
+            <item>Anambra</item>
+            <item>Bauchi</item>
+            <item>Benue</item>
+            <item>Borno</item>
+            <item>Cross River</item>
+            <item>Delta</item>
+            <item>Ebonyi</item>
+            <item>Edo</item>
+        </string-array>
+
 
 </resources>
