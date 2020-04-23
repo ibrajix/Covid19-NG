@@ -38,20 +38,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textLogo"
+                            android:textSize="18sp"
                             android:text="@string/covid_19"
                             android:textStyle="bold"
+                            android:layout_marginBottom="4dp"
                             android:textColor="@color/yellow"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/NG"
-                            android:textSize="18dp"
+                            android:textSize="18sp"
                             android:layout_toRightOf="@+id/textLogo"
                             android:layout_toEndOf="@+id/textLogo"
-                            android:layout_centerInParent="true"
                             android:textColor="@color/dark_blue_home"
                             android:layout_marginLeft="3dp"
+                            android:layout_marginBottom="6dp"
                             android:textStyle="bold" />
 
                     </RelativeLayout>
@@ -85,6 +87,7 @@
                         android:id="@+id/latestUpdatesText"
                         android:text="@string/latest_updates"
                         android:textStyle="bold"
+                        android:textSize="15sp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
@@ -376,8 +379,6 @@
                         android:id="@+id/callText"
                         android:text="@string/call_text"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
@@ -412,7 +413,6 @@
                     android:textStyle="bold"
                     android:layout_below="@+id/callContainer"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
                     android:text="@string/todo"
                     android:layout_marginBottom="10dp"
                     />
