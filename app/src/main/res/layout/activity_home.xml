@@ -46,6 +46,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/NG"
+                            android:textSize="18dp"
                             android:layout_toRightOf="@+id/textLogo"
                             android:layout_toEndOf="@+id/textLogo"
                             android:layout_centerInParent="true"
@@ -310,7 +311,7 @@
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
+                    android:layout_height="42dp"
                     android:background="@drawable/tab_layout_background"
                     app:tabBackground="@drawable/tab_layout_selector"
                     app:tabSelectedTextColor="@color/white"
@@ -363,9 +364,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/callContainer"
                     android:background="@drawable/rounded_corner_3"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="14dp"
                     android:layout_marginBottom="10dp"
                     >
 
@@ -408,6 +409,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/todoText"
+                    android:textStyle="bold"
                     android:layout_below="@+id/callContainer"
                     android:layout_marginLeft="30dp"
                     android:layout_marginStart="30dp"
@@ -447,7 +449,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/shop_home"
-                                android:textSize="15sp"
+                                android:textSize="11sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -473,7 +475,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/learn_skill"
-                                android:textSize="15sp"
+                                android:textSize="11sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -499,7 +501,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/watch_movie"
-                                android:textSize="15sp"
+                                android:textSize="11sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
@@ -525,7 +527,7 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/call_friend"
-                                android:textSize="15sp"
+                                android:textSize="11sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/light_blue"
                                 android:textAlignment="center"/>
