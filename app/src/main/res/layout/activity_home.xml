@@ -411,8 +411,8 @@
                     android:id="@+id/todoText"
                     android:textStyle="bold"
                     android:layout_below="@+id/callContainer"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:text="@string/todo"
                     android:layout_marginBottom="10dp"
                     />
@@ -430,12 +430,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:orientation="horizontal"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/image1"
@@ -461,7 +465,9 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/image2"
@@ -487,7 +493,9 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp">
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/image3"
@@ -512,8 +520,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp">
+                            android:layout_weight="1"
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/image4"
