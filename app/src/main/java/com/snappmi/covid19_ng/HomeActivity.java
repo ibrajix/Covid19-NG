@@ -59,6 +59,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //set click listeners to bottom nav
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        bottomNavigation.setItemIconTintList(null);
 
     }
 

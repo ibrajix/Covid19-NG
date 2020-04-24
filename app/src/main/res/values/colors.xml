@@ -19,4 +19,5 @@
     <color name="bottom_nav_icons">#7890FD</color>
     <color name="black">#000000</color>
     <color name="caret_grey">#5C5C5C</color>
+    <color name="call_green">#00BFA6</color>
 </resources>

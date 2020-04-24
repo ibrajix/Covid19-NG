@@ -27,7 +27,7 @@
     <string name="todo">Feeling bored? Try these...</string>
     <string name="shop_home">Shop</string>
     <string name="learn_skill">Learn</string>
-    <string name="watch_movie">Watch</string>
+    <string name="watch_movie">Movies</string>
     <string name="read_book">Read</string>
     <string name="call_friend">Call</string>
     <string name="news">News</string>
@@ -67,19 +67,31 @@
     <string name="shop_from_home">Shop from home</string>
     <string name="shop_details_text">Get basic needs such as food and pharmaceutical from government approved stores and pharmacies</string>
     <string name="select_state">Select your state</string>
-        <string-array name="states_array">
-            <item>Abia</item>
-            <item>Adamawa</item>
-            <item>Akwa Ibom</item>
-            <item>Anambra</item>
-            <item>Bauchi</item>
-            <item>Benue</item>
-            <item>Borno</item>
-            <item>Cross River</item>
-            <item>Delta</item>
-            <item>Ebonyi</item>
-            <item>Edo</item>
-        </string-array>
+    <string-array name="states_array">
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+    </string-array>
+
+    <!-- Learn Skill activity -->
+    <string name="learn_a_skill">Learn A Skill</string>
+    <string name="select_skill">Select a skill</string>
+    <string name="blockchain">Blockchain</string>
+    <string name="cooking">Cooking</string>
+
+    <!-- Learn Skill activity -->
+    <string name="call_a_friend">Call A Friend</string>
+
+    <!-- Call activity -->
+    <string name="call_text_details">Now is the right time to strengthen existing relationships, fix strained relationships, or build one. Make that call NOW!!</string>
 
 
 </resources>

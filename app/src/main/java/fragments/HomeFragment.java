@@ -14,8 +14,11 @@ import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabLayout;
 import com.hbb20.CountryCodePicker;
+import com.snappmi.covid19_ng.CallActivity;
+import com.snappmi.covid19_ng.LearnSkillActivity;
 import com.snappmi.covid19_ng.R;
 import com.snappmi.covid19_ng.ShopActivity;
+import com.snappmi.covid19_ng.WatchMovieActivity;
 
 import adapters.TabsAdapter;
 
@@ -73,11 +76,35 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //set click listener to shop icon
+        //set click listener to icons
         shop_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        learn_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), LearnSkillActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        movies_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), WatchMovieActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        call_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), CallActivity.class);
                 startActivity(intent);
             }
         });
