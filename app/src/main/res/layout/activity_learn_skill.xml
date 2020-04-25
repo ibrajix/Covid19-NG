@@ -81,7 +81,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
-                    android:id="@+id/blockChain">
+                    android:id="@+id/blockChain"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/blockChainIcon"
@@ -104,8 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/blogging">
 
@@ -131,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/cooking">
 
                     <ImageView
@@ -166,6 +167,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/drawing">
 
                     <ImageView
@@ -189,8 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/graphicDesign">
 
@@ -216,6 +217,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/language">
 
                     <ImageView
@@ -253,6 +255,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/leadership">
 
                     <ImageView
@@ -277,8 +280,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
                     android:id="@+id/timeManagemnt">
 
                     <ImageView
@@ -303,6 +305,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/marketing">
 
                     <ImageView
@@ -339,6 +342,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/meditation">
 
@@ -363,8 +367,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/photography">
 
@@ -389,6 +392,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_weight="1"
                     android:id="@+id/programming">
 
                     <ImageView
@@ -426,6 +430,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:id="@+id/psychology">
 
                     <ImageView
@@ -449,8 +454,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/publicSpeaking">
 
@@ -474,6 +478,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:id="@+id/writing">
 
