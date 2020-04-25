@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.snappmi.covid19_ng.LearnSkillActivity;
 import com.snappmi.covid19_ng.R;
+import com.snappmi.covid19_ng.WebLinksActivity;
 
 public class NewsFragment extends Fragment {
 
@@ -46,8 +48,9 @@ public class NewsFragment extends Fragment {
         who_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen"));
+                String url = "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -55,8 +58,9 @@ public class NewsFragment extends Fragment {
         ncdc_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://covid19.ncdc.gov.ng/"));
+                String url = "https://covid19.ncdc.gov.ng/";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -64,8 +68,9 @@ public class NewsFragment extends Fragment {
         bbc_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.bbc.com/news/coronavirus"));
+                String url = "https://www.bbc.com/news/coronavirus";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -73,8 +78,9 @@ public class NewsFragment extends Fragment {
         al_jazeera_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.aljazeera.com/topics/events/coronavirus-outbreak.html"));
+                String url = "https://www.aljazeera.com/topics/events/coronavirus-outbreak.html";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -82,8 +88,9 @@ public class NewsFragment extends Fragment {
         vanguard_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.vanguardngr.com/category/coronavirus-updates/"));
+                String url = "https://www.vanguardngr.com/category/coronavirus-updates/";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -91,8 +98,9 @@ public class NewsFragment extends Fragment {
         nytimes_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.nytimes.com/2020/04/08/world/coronavirus-live-news-updates.html"));
+                String url = "https://www.nytimes.com/2020/04/08/world/coronavirus-live-news-updates.html";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });
@@ -100,8 +108,9 @@ public class NewsFragment extends Fragment {
         wikipedia_link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"));
+                String url = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic";
+                Intent intent = new  Intent(getContext(), WebLinksActivity.class);
+                intent.putExtra("link_url", url);
                 startActivity(intent);
             }
         });

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReadBooksActivity"></activity>
+        <activity android:name=".WebLinksActivity"></activity>
+        <activity android:name=".ReadBooksActivity" />
         <activity android:name=".CallActivity" />
         <activity android:name=".WatchMovieActivity" />
         <activity android:name=".LearnSkillActivity" />
