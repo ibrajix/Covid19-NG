@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.hbb20.CountryCodePicker;
@@ -92,4 +94,20 @@ public class HomeActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+
+    @Override
+    public void onBackPressed() {
+        if (bottomNavigation.getSelectedItemId() == R.id.navigation_home)
+        {
+            super.onBackPressed();
+            finish();
+        }
+        else
+        {
+            bottomNavigation.setSelectedItemId(R.id.navigation_home);
+        }
+    }
+
+
 }

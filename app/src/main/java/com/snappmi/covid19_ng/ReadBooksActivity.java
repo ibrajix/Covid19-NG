@@ -2,7 +2,6 @@ package com.snappmi.covid19_ng;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
@@ -10,19 +9,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class WatchMovieActivity extends AppCompatActivity {
+public class ReadBooksActivity extends AppCompatActivity {
 
-     private WebView web_view, myWebView;
-     private ProgressBar progress_bar;
-     private TextView loading_text;
-
+    private WebView web_view;
+    private ProgressBar progress_bar;
+    private TextView loading_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,20 +33,20 @@ public class WatchMovieActivity extends AppCompatActivity {
         }
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_watch_movie);
+        setContentView(R.layout.activity_read_books);
 
         web_view = findViewById(R.id.webView);
         progress_bar = findViewById(R.id.progressBar);
         web_view.getSettings().setJavaScriptEnabled(true);
         web_view.setWebViewClient(new WebViewClient());
-        web_view.loadUrl("https://www.popcornflix.com");
+        web_view.loadUrl("https://www.manybooks.net/");
         loading_text = findViewById(R.id.loadingText);
 
         web_view.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
                 if(progress < 100 && progress_bar.getVisibility() == ProgressBar.GONE){
                     progress_bar.setVisibility(ProgressBar.VISIBLE);
-                   loading_text.setVisibility(View.VISIBLE);
+                    loading_text.setVisibility(View.VISIBLE);
                 }
 
                 progress_bar.setProgress(progress);

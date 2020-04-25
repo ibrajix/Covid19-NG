@@ -2,11 +2,13 @@ package com.snappmi.covid19_ng;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,6 +18,8 @@ public class LearnSkillActivity extends AppCompatActivity {
 
     private ImageView learn_skill, blogger, child_psychology, cooking, drawing, graphic_design, leadership, marketing, meditation,
             language, photography, programming, public_speaking, time_management, writing, back_icon;
+
+    private Button read_book;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,7 @@ public class LearnSkillActivity extends AppCompatActivity {
         time_management = findViewById(R.id.timeManagemntIcon);
         writing = findViewById(R.id.writingIcon);
         back_icon = findViewById(R.id.backIcon);
+        read_book = findViewById(R.id.readBook);
 
         Glide.with(this).load(R.drawable.ic_blockchain).apply(RequestOptions.circleCropTransform()).into(learn_skill);
         Glide.with(this).load(R.drawable.ic_blogging).apply(RequestOptions.circleCropTransform()).into(blogger);
@@ -75,6 +80,13 @@ public class LearnSkillActivity extends AppCompatActivity {
             }
         });
 
+        read_book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LearnSkillActivity.this, ReadBooksActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
