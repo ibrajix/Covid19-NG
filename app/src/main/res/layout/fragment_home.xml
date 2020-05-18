@@ -104,6 +104,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
                         android:layout_marginEnd="20dp"
+                        app:ccp_customMasterCountries="AD,AE,AF,AL,AM,AO,AR,AT,AU,AZ,BB,BD,BE,BG,BH,BI,BJ,BR,BS,BW,BY,CG,CI,CL,CM,CN,CO,CR,CU,CY,CZ,DE,DJ,DK,DO,DZ,EC,EG,ES,ET,FI,FJ,FR,GA,GB,GE,GH,GM,GN,GR,GT,HK,HN,HT,HU,ID,IE,IL,IN,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KR,KW,KZ,LB,LT,LU,LV,LY,MA,MC,MG,ML,MW,MY,MX,MZ,NA,NE,NG,NL,NO,NP,NZ,OM,PA,PE,PH,PK,PS,PT,PY,QA,RO,RS,RU,RW,SA,SD,SE,SG,SI,SK,SL,SN,SO,SS,SV,SY,SZ,TD,TG,TH,TR,TT,TW,TZ,UA,UG,US,UY,VN,YE,ZA,ZM,ZW"
                         android:layout_centerHorizontal="true"
                         />
 
@@ -136,7 +137,6 @@
                         android:textAlignment="center"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:text="220"
                         android:textColor="@color/yellow"
                         />
 
@@ -163,7 +163,6 @@
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/green"
                         android:gravity="center"
-                        android:text="12"
                         />
 
                     <TextView
@@ -188,7 +187,6 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:gravity="center"
-                        android:text="102"
                         />
 
                     <TextView
@@ -203,6 +201,22 @@
                         android:gravity="center"
                         android:textColor="@color/red"
                         />
+
+                    <!--<com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:ccp_defaultNameCode="NG"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="false"
+                        app:ccpDialog_showCloseIcon="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_centerHorizontal="true"
+                        />-->
 
                 </RelativeLayout>
 
@@ -219,10 +233,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginRight="2dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_marginEnd="10dp"
                         >
 
                         <TextView
@@ -231,6 +245,7 @@
                             android:text="@string/today"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
@@ -240,14 +255,14 @@
                             android:text="@string/today_confirmed_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/todayConfirmedNumber"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
                             />
@@ -259,7 +274,7 @@
                             android:text="@string/today_recovered_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
@@ -268,7 +283,7 @@
                             android:id="@+id/todayCriticalNumber"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
 
@@ -279,14 +294,14 @@
                             android:text="@string/today_death_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/todayDeathNumber"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="10dp"
                             />

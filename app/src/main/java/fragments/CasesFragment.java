@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.snappmi.covid19_ng.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +56,6 @@ public class CasesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_cases, container, false);
-       /* recyclerView = root.findViewById(R.id.recyclerView);
-        statesList = new ArrayList<>();*/
-
 
        sort_section = root.findViewById(R.id.sortSection);
 
@@ -57,6 +65,8 @@ public class CasesFragment extends Fragment {
                openOptionsDialog();
            }
        });
+
+       getData();
 
         return root;
     }
@@ -78,4 +88,64 @@ public class CasesFragment extends Fragment {
         });
         builder.show();
     }
+
+    public void getData(){
+        String new_url = "https://covidnigeria.herokuapp.com/api";
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, new_url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray("states");
+
+                    String cc = jsonObject.getString("cases");
+
+                    Log.e("testurl", cc);
+
+                   /* progressBar.setVisibility(View.GONE);
+                    JSONObject jsonObject = new JSONObject(response);
+                    String cc = jsonObject.getString("cases");
+                    String rc = jsonObject.getString("recovered");
+                    String dc = jsonObject.getString("deaths");
+                    String tc = jsonObject.getString("todayCases");
+                    String tcc = jsonObject.getString("critical");
+                    String td = jsonObject.getString("todayDeaths");
+
+                    int pcc = Integer.parseInt(cc);
+                    int prc = Integer.parseInt(rc);
+                    int pdc = Integer.parseInt(dc);
+                    int ptc = Integer.parseInt(tc);
+                    int ptcc = Integer.parseInt(tcc);
+                    int ptd = Integer.parseInt(td);
+
+                    String confirmed_cases_formatted = String.format(Locale.US,"%,d", pcc);
+                    String recovered_cases_formatted = String.format(Locale.US,"%,d", prc);
+                    String death_cases_formatted = String.format(Locale.US,"%,d", pdc);
+                    String today_cases_formatted = String.format(Locale.US,"%,d", ptc);
+                    String today_cases_critical_formatted = String.format(Locale.US,"%,d", ptcc);
+                    String today_deaths_formatted = String.format(Locale.US,"%,d", ptd);
+
+                    confirmed_cases.setText(confirmed_cases_formatted);
+                    recovered_cases.setText(recovered_cases_formatted);
+                    death_cases.setText(death_cases_formatted);
+                    today_confirmed_cases.setText(today_cases_formatted);
+                    today_critical_cases.setText(today_cases_critical_formatted);
+                    today_death_cases.setText(today_deaths_formatted);*/
+                } catch (JSONException e) {
+                    Log.e("INFOOO", response);
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Error response", error.toString());
+            }
+        });
+
+        requestQueue.add(stringRequest);
+    }
+
 }
