@@ -41,17 +41,20 @@
                             android:id="@+id/textLogo"
                             android:text="@string/covid_19"
                             android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="6dp"
                             android:textColor="@color/yellow"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/NG"
+                            android:textSize="18sp"
                             android:layout_toRightOf="@+id/textLogo"
                             android:layout_toEndOf="@+id/textLogo"
-                            android:layout_centerInParent="true"
                             android:textColor="@color/dark_blue_home"
                             android:layout_marginLeft="3dp"
+                            android:layout_marginBottom="6dp"
                             android:textStyle="bold" />
 
                     </RelativeLayout>
@@ -328,7 +331,7 @@
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
+                    android:layout_height="42dp"
                     android:background="@drawable/tab_layout_background"
                     app:tabBackground="@drawable/tab_layout_selector"
                     app:tabSelectedTextColor="@color/white"
@@ -381,9 +384,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/callContainer"
                     android:background="@drawable/rounded_corner_3"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="14dp"
                     android:layout_marginBottom="10dp"
                     >
 
@@ -438,6 +441,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/todoText"
                     android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
                     >
 
                     <LinearLayout
@@ -452,7 +457,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:id="@+id/shopIcon">
+                            android:id="@+id/shopIcon"
+                            android:layout_weight="1"
+                            android:gravity="center">
 
 
                             <ImageView
@@ -478,8 +485,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
                             android:id="@+id/learnIcon">
 
                             <ImageView
@@ -505,8 +512,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
                             android:id="@+id/moviesIcon">
 
                             <ImageView
@@ -532,8 +539,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
                             android:id="@+id/callIcon">
 
                             <ImageView
