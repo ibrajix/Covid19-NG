@@ -39,6 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         /*Glide.with(context).load(statesList.get(position).getState_cases()).into(holder.imageView);*/
         holder.state_name.setText(statesList.get(position).getState_name());
+        holder.state_cases.setText(statesList.get(position).getState_cases());
     }
 
     @Override
@@ -53,8 +54,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            state_name = itemView.findViewById(R.id.states_name);
-            state_cases = itemView.findViewById(R.id.states_cases);
+            state_name = itemView.findViewById(R.id.stateName);
+            state_cases = itemView.findViewById(R.id.caseInState);
 
         }
 

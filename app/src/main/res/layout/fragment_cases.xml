@@ -71,7 +71,7 @@
                         android:layout_marginBottom="5dp"
                         />
 
-                    <com.hbb20.CountryCodePicker
+                    <!--<com.hbb20.CountryCodePicker
                         android:id="@+id/ccp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,6 +85,16 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_centerHorizontal="true"
+                        />-->
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/naijaFlag"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
                         />
 
                 </RelativeLayout>
@@ -116,7 +126,6 @@
                         android:textAlignment="center"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:text="220"
                         android:textColor="@color/yellow"
                         />
 
@@ -143,7 +152,6 @@
                         android:layout_centerHorizontal="true"
                         android:textColor="@color/green"
                         android:gravity="center"
-                        android:text="12"
                         />
 
                     <TextView
@@ -168,7 +176,6 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:gravity="center"
-                        android:text="102"
                         />
 
                     <TextView
@@ -211,6 +218,7 @@
                             android:text="@string/today"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
@@ -220,14 +228,14 @@
                             android:text="@string/today_confirmed_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/todayConfirmedNumber"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
                             />
@@ -239,7 +247,7 @@
                             android:text="@string/today_recovered_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
@@ -248,7 +256,7 @@
                             android:id="@+id/todayCriticalNumber"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="5dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
 
@@ -259,14 +267,14 @@
                             android:text="@string/today_death_cases"
                             android:layout_marginLeft="10dp"
                             android:layout_marginStart="10dp"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/todayDeathNumber"
-                            android:textSize="12sp"
+                            android:textSize="10sp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginStart="10dp"
                             />
@@ -357,6 +365,7 @@
 
                 </RelativeLayout>
 
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -364,247 +373,21 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ProgressBar
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/abia"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Abia"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:layout_marginRight="20dp"
-                            android:gravity="end"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
+                        android:id="@+id/progressBar2"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/abia"
-                        android:id="@+id/adamawa"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Adamawa"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
 
-                    <LinearLayout
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/adamawa"
-                        android:id="@+id/akwaIbom"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Akwa Ibom"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/akwaIbom"
-                        android:id="@+id/anambra"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Anambra"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/anambra"
-                        android:id="@+id/bauchi"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bauchi"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="10"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/bauchi"
-                        android:id="@+id/bayelsa"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bayelsa"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="3"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/bayelsa"
-                        android:id="@+id/crossRiver"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cross River"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="2"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/crossRiver"
-                        android:id="@+id/delta"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Delta"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/delta"
-                        android:id="@+id/ebonyi"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ebonyi"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:gravity="end"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/red" />
-                    </LinearLayout>
+                        android:id="@+id/statesCasesRecyclerView"/>
 
                 </RelativeLayout>
-
-
-
-               <!-- <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/stateCasesList"
-                    android:layout_below="@+id/stateCases"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Abia"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:textColor="@color/red" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Abia" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:textColor="@color/red" />
-
-                </RelativeLayout>
--->
-
-               <!-- <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/recyclerView"
-                    android:layout_below="@+id/states"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="20dp"
-                    />-->
-
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
