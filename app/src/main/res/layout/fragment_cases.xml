@@ -29,7 +29,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/casesHeaderText"
-                        android:text="@string/cases"
+                        android:text="@string/cases_ng"
                         android:layout_marginTop="21dp"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -63,7 +63,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/latestUpdatesText"
-                        android:text="Total Cases"
+                        android:text="@string/total_cases"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
                         android:layout_marginStart="20dp"
@@ -313,9 +313,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/sortSection"
-                     android:layout_below="@+id/casesText">
+                    android:layout_below="@+id/casesText"
+                    android:layout_marginBottom="20dp"
+                    >
 
-                    <TextView
+                    <!--<TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/sortText"
@@ -333,7 +335,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginBottom="20dp"
-                        android:layout_marginRight="20dp" />
+                        android:layout_marginRight="20dp" />-->
 
                 </RelativeLayout>
 

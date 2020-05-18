@@ -47,6 +47,8 @@
     <!-- Bottom Nav-->
     <string name="home">Home</string>
     <string name="cases">Cases</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="cases_ng">Cases in Nigeria</string>
 
     <!-- Cases fragment -->
     <string name="all_cases_states">All cases in each state</string>

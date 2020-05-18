@@ -169,6 +169,7 @@ public class CasesFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
                 if ("States (A-Z)".equals(options[which])) {
                     Toast.makeText(getContext(), "I will sort the states alphabetically", Toast.LENGTH_SHORT).show();
+
                 }
                 if("Most cases".equals(options[which])) {
                     Toast.makeText(getContext(), "I will sort based on number of cases, highest - lowest", Toast.LENGTH_SHORT).show();
@@ -194,8 +195,6 @@ public class CasesFragment extends Fragment {
                     String tcc = jsonObject.getString("critical");
                     String td = jsonObject.getString("todayDeaths");
 
-                    loading2.setVisibility(View.GONE);
-
                     int pcc = Integer.parseInt(cc);
                     int prc = Integer.parseInt(rc);
                     int pdc = Integer.parseInt(dc);
@@ -216,6 +215,9 @@ public class CasesFragment extends Fragment {
                     today_confirmed_cases.setText(today_cases_formatted);
                     today_critical_cases.setText(today_cases_critical_formatted);
                     today_death_cases.setText(today_deaths_formatted);
+
+                    loading2.setVisibility(View.GONE);
+
                 } catch (JSONException e) {
                     Log.e("INFOOO", response);
                     e.printStackTrace();
