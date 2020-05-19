@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.snappmi.covid19_ng">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WebLinksActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".WebLinksActivity" />
         <activity android:name=".ReadBooksActivity" />
         <activity android:name=".CallActivity" />
         <activity android:name=".WatchMovieActivity" />

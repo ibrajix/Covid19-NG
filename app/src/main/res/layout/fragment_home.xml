@@ -563,6 +563,21 @@
                     </LinearLayout>
                 </RelativeLayout>
             </RelativeLayout>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:id="@+id/aboutButton"
+                android:layout_below="@+id/callSection"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_transparent"
+                android:text="@string/about"
+                android:textAllCaps="false"
+                android:layout_marginBottom="20dp"
+                />
+
+
+
         </RelativeLayout>
     </ScrollView>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

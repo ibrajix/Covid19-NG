@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.hbb20.CountryCodePicker;
+import com.snappmi.covid19_ng.AboutActivity;
 import com.snappmi.covid19_ng.CallActivity;
 import com.snappmi.covid19_ng.LearnSkillActivity;
 import com.snappmi.covid19_ng.R;
@@ -67,6 +69,7 @@ public class HomeFragment extends Fragment {
     private ProgressBar progressBar;
     private SwipeRefreshLayout swipeRefreshLayout;
     private FirebaseFirestore db;
+    private Button about_button;
 
     private String TAG = "Tag";
 
@@ -102,6 +105,7 @@ public class HomeFragment extends Fragment {
         today_death_cases = root.findViewById(R.id.todayDeathNumber);
         swipeRefreshLayout = root.findViewById(R.id.swipeRefresh);
         db = FirebaseFirestore.getInstance();
+        about_button = root.findViewById(R.id.aboutButton);
 
 
         final TabsAdapter tabsAdapter = new TabsAdapter(getContext(), getChildFragmentManager(),
@@ -156,6 +160,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), CallActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        about_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AboutActivity.class);
                 startActivity(intent);
             }
         });

@@ -95,5 +95,13 @@
     <!-- Call activity -->
     <string name="call_text_details">Now is the right time to strengthen existing relationships, fix strained relationships, or build one. Make that call NOW!!</string>
 
+    <!-- About activity -->
+    <string name="about">About</string>
+    <string name="ib_fullname">Inuwa Ibrahim</string>
+    <string name="ma_fullname">Abdull Maraya</string>
+    <string name="contact_me">Contact me</string>
+    <string name="ib_email">Ibrahimcodes@gmail.com</string>
+    <string name="ma_email">Ibrahimcodes@gmail.com</string>
+    <string name="made_by">Made with love by</string>
 
 </resources>
