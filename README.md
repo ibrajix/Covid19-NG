@@ -1,7 +1,7 @@
 # Covid19-NG
 Covid-19 app
 
-<img src="https://user-images.githubusercontent.com/39574228/113269225-2534c400-92d0-11eb-9d87-3e352fba027b.jpeg" height="500" >
+<img src="https://user-images.githubusercontent.com/39574228/113269225-2534c400-92d0-11eb-9d87-3e352fba027b.jpeg" width="400" >
 
 ## This App Features
 - Live Updates on cases in all countries alongside all states in Nigeria
